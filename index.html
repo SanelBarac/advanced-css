@@ -2,86 +2,109 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Assignment Animacija</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assignment Responsive Galerija</title>
 	<style type="text/css">
-		html,
+
 		body {
-		  background-color: #050210; 
-		  height: 100%;
-		  overflow: hidden;
-		  display:flex;
-		  justify-content: center;
-		  align-items: center;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		
+		#flex_container, h1, p {
+			max-width: 960px;
+			width: 90%;
+			margin: 0 auto;
+		}
+         
+        #row {
+         	display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+         }
+
+		figure {
+			flex-basis: 10%;
+            box-sizing: border-box;
+            border: 1px solid gray;
+            border-radius: 5px;			
 		}
 
-		.center {
-		  margin: 0 auto;
+		img {
+            width: 100%;
+			background-color: #6495ED;
 		}
 
-		.outer-ring {
-		  position: absolute;
-		  left: calc(50% - 150px);
-		  height: 300px;
-		  width: 300px;
-		  background-image: linear-gradient(#fb5dad, #55fb9f, #b97aff);
-		  border-radius: 50%;
-		  
-		  animation-name: rotate;
-		  animation-duration: 1s;
-		  animation-iteration-count: infinite;
-          animation-timing-function: linear;
+		figcaption{
+			width: 100%;
+			text-align: center;
+			font-size: 12px;
 		}
 
-		.outer-ring span {
-		  position: absolute;
-		  left: calc(50% - 150px);
-		  height: 300px;
-		  width: 300px;
-		  background-image: linear-gradient(#fb5dad, #55fb9f, #b97aff);
-		  border-radius: 50%;
-		  filter: blur(40px);
+		@media screen and (max-width: 1024px) {
+			figure {
+			flex-basis: 13%;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			figure {
+			flex-basis: 21%;
+			}
+		}
+		@media screen and (max-width: 414px) {
+			figure {
+			flex-basis: 100%;
+			}
 		}
 
-		.outer-ring:after {
-		  content: "";
-		  position: absolute;
-		  top: 25px;
-		  left: 25px;
-		  right: 25px;
-		  bottom: 25px;
-		  background: #050210;
-		  border-radius: 50%;
-		}
-
-		.inner-ring {
-		  position: absolute;
-		  left: calc(50% - 125px);
-		  height: 250px;
-		  width: 250px;
-		  background: #1c1b1b; 
-		  border-radius: 50%;
-
-		  animation-name:grow;
-		  animation-duration: 1s;
-	      animation-iteration-count: infinite;
-          animation-timing-function: linear;
-		}
-
-		@keyframes rotate {
-		    0% {transform:rotate(0deg);}
-		    100% {transform:rotate(360deg);}
-		}
-
-		@keyframes grow {
-		    0% {transform:scale(0, 0);}
-		    100% {transform:scale(1, 1);}
-		}
 	</style>
 </head>
-<body>
-	<div class="outer-ring center">
-		<span></span>
-	</div>
-    <div class="inner-ring center"></div>
-</body>
+	<body>
+		<h1>Gallery heading</h1>
+	    <div id="flex_container">
+	    	<div id="row">
+		    	<figure>
+	            	<img src="placeholder-image.png">
+	            	<figcaption>Image Title</figcaption>
+	            </figure>
+				<figure >
+	            	<img src="placeholder-image.png">
+	            	<figcaption>Image Title</figcaption>
+	            </figure>
+	            <figure >
+	            	<img src="placeholder-image.png">
+	            	<figcaption>Image Title</figcaption>
+	            </figure>
+	            <figure >
+	            	<img src="placeholder-image.png">
+	            	<figcaption>Image Title</figcaption>
+	            </figure>
+	            <figure >
+	            	<img src="placeholder-image.png">
+	            	<figcaption>Image Title</figcaption>
+	            </figure>
+	            <figure >
+	            	<img src="placeholder-image.png">
+	            	<figcaption>Image Title</figcaption>
+	            </figure>
+	            <figure >
+	            	<img src="placeholder-image.png">
+	            	<figcaption>Image Title</figcaption>
+	            </figure>
+	            <figure >
+	            	<img src="placeholder-image.png">
+	            	<figcaption>Image Title</figcaption>
+	            </figure>
+	            <figure >
+	            	<img src="placeholder-image.png">
+	            	<figcaption>Image Title</figcaption>
+	            </figure>
+	            <figure >
+	            	<img src="placeholder-image.png">
+	            	<figcaption>Image Title</figcaption>
+	            </figure>
+            </div>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
 </html>
